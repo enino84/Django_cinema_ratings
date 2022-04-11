@@ -39,17 +39,17 @@ The view define the following methods:
 9. `def update_movie_action(request, movie_id, publicp)`: this update the scope of a movie item from public to private or viceversa.
 10. `def restart_database(request)`: this function is for testing purposes, this restarts the database (delete all entries) and creates some dummy records.
 
-| views.py/methods.py                          | `is_valid_password(psswd)` | `is_valid_email(email)` | `validate_user(email)` |   |   |   |   |   |
-|----------------------------------------------|----------------------------|-------------------------|------------------------|---|---|---|---|---|
-| `def index(request)`                         |                            |                         |                        |   |   |   |   |   |
-| `def register_owner(request)`                |                            |                         |                        |   |   |   |   |   |
-| `def main_menu(request)`                     |                            |                         |                        |   |   |   |   |   |
-| `def register_movie_form(request)`           |                            |                         |                        |   |   |   |   |   |
-| `def register_movie_action(request)`         |                            |                         |                        |   |   |   |   |   |
-| `def list_of_movies(request)`                |                            |                         |                        |   |   |   |   |   |
-| `def delete_movie_action(request, movie_id)` |                            |                         |                        |   |   |   |   |   |
-| `def delete_movie_action(request, movie_id)` |                            |                         |                        |   |   |   |   |   |
-| `def restart_database(request)`              |                            |                         |                        |   |   |   |   |   |
+| views.py/methods.py                      	| `is_valid_password` 	| `is_valid_email` 	| `validate_user` 	| `validate_login` 	| `register_movie` 	| `get_public_movies` 	| `get_owned_movies` 	| `delete_movie` 	|   	|   	|
+|------------------------------------------	|---------------------	|------------------	|-----------------	|------------------	|------------------	|---------------------	|--------------------	|----------------	|---	|---	|
+| `index(request)`                         	|                     	|                  	|                 	|                  	|                  	|                     	|                    	|                	|   	|   	|
+| `register_owner(request)`                	|                     	|                  	|                 	|                  	|                  	|                     	|                    	|                	|   	|   	|
+| `main_menu(request)`                     	|                     	|                  	|                 	|                  	|                  	|                     	|                    	|                	|   	|   	|
+| `register_movie_form(request)`           	|                     	|                  	|                 	|                  	|                  	|                     	|                    	|                	|   	|   	|
+| `register_movie_action(request)`         	|                     	|                  	|                 	|                  	|                  	|                     	|                    	|                	|   	|   	|
+| `list_of_movies(request)`                	|                     	|                  	|                 	|                  	|                  	|                     	|                    	|                	|   	|   	|
+| `delete_movie_action(request, movie_id)` 	|                     	|                  	|                 	|                  	|                  	|                     	|                    	|                	|   	|   	|
+| `delete_movie_action(request, movie_id)` 	|                     	|                  	|                 	|                  	|                  	|                     	|                    	|                	|   	|   	|
+| `restart_database(request)`              	|                     	|                  	|                 	|                  	|                  	|                     	|                    	|                	|   	|   	|
 
 
     
