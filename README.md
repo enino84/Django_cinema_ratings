@@ -1,6 +1,8 @@
 # simple_cinema_ratings
 This is a simple web-based system via Django for movie/film ratings.
 
+I suppose that `python3` and `Django` are available in your machine and properly configured (standard configuration).
+
 To run this app, simply:
 
 1. Clone this repo
@@ -13,7 +15,7 @@ Since this app is based on Django framwork, in this example, I consider three la
 2. `views.py`: defines the actions to take regarding urls
 3. `methods.py`: is an additional layer for handling communication with the persistence layer (database), this employs the `django.db` module.
 
-In this manner, I don't mix code from the persistence layer (database access) with that from the views one, for example. Databases queries are encapsulated thru the `django.db` into the `methods.py` module so there are no explicit sql statements in this project.
+In this manner, I don't mix code from the persistence layer (database access) with that from the views one, for example. Databases queries are encapsulated thru the `django.db` into the `methods.py` module so there are no explicit sql statements in this project. A `template` folder is provided to generate dynamical websites.
 
 The view define the following methods:
 1. `def index(request)`: route requests to the index page.
@@ -37,7 +39,19 @@ The view define the following methods:
 9. `def update_movie_action(request, movie_id, publicp)`: this update the scope of a movie item from public to private or viceversa.
 10. `def restart_database(request)`: this function is for testing purposes, this restarts the database (delete all entries) and creates some dummy records.
 
-    
+| views.py/methods.py                          | `is_valid_password(psswd)` | `is_valid_email(email)` | `validate_user(email)` |   |   |   |   |   |
+|----------------------------------------------|----------------------------|-------------------------|------------------------|---|---|---|---|---|
+| `def index(request)`                         |                            |                         |                        |   |   |   |   |   |
+| `def register_owner(request)`                |                            |                         |                        |   |   |   |   |   |
+| `def main_menu(request)`                     |                            |                         |                        |   |   |   |   |   |
+| `def register_movie_form(request)`           |                            |                         |                        |   |   |   |   |   |
+| `def register_movie_action(request)`         |                            |                         |                        |   |   |   |   |   |
+| `def list_of_movies(request)`                |                            |                         |                        |   |   |   |   |   |
+| `def delete_movie_action(request, movie_id)` |                            |                         |                        |   |   |   |   |   |
+| `def delete_movie_action(request, movie_id)` |                            |                         |                        |   |   |   |   |   |
+| `def restart_database(request)`              |                            |                         |                        |   |   |   |   |   |
+
+
     
     
 
