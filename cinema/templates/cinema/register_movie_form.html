@@ -1,0 +1,75 @@
+<html>
+<h1>Register Movie</h1>
+<br>
+<br>
+<form action="register_movie_action" method="POST">
+{% csrf_token %}
+<input type="hidden" name="email" value="{{email}}">
+<table>
+
+<tr>
+<td><label for="mname">Name:</label></td>
+<td><input type="text" id="mname" name="mname"></td>
+</tr>
+
+<tr>
+<td><label for="mstars">Stars:</label></td>
+<td>
+<select name="mstars" id="mstars">
+  <option value="1">1 :(</option>
+  <option value="2">2 :S</option>
+  <option value="3">3 :|</option>
+  <option value="4">4 :)</option>
+  <option value="5">5 :D</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td><label for="mrelease">Released on:</label></td>
+<td><input type="date" id="mrelease" name="mrelease"></td>
+</tr>
+
+<tr>
+<td><label for="mclasspg">PG Classification</label></td>
+<td> 
+<select name="mclasspg" id="mclasspg">
+  <option value="G">G - General Audiences</option>
+  <option value="PG">PG - Parental Guidance Suggested</option>
+  <option value="PG-13">PG-13 - Parents Strongly Cautioned</option>
+  <option value="R">R - Restricted</option>
+  <option value="NC-7">NC-7 - Adults Only</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td><label for="mcomments">Comments:</label></td>
+<td>
+<textarea id="mcomments" name="mcomments" rows="4" cols="50">
+Write your comments here.
+</textarea> 
+</td>
+</tr>
+
+<tr>
+<td><label for="mpublic">Public element?:</label></td>
+<td> 
+<select name="mpublic" id="mpublic">
+  <option value="True">True</option>
+  <option value="False">False</option>
+</select>
+</td>
+</tr>
+
+</table>
+<input type="submit" value="Register Movie" onclick="return confirm('Are you sure you want to add this movie?');">
+</form> 
+
+<a href="main_menu">Go to the main menu</a>
+
+<script>
+document.getElementById('mrelease').valueAsDate = new Date();
+</script>
+</html>
+

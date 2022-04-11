@@ -1,0 +1,84 @@
+<html>
+
+<script>
+function update_movie(movie_id){
+var select = document.getElementById('mpublic');
+var value  = select.options[select.selectedIndex].text;
+if (value=='True') {
+  value=1;
+}else{
+  value=0;
+}
+
+//alert('update_movie_action/'+movie_id+'/'+value+'/');
+window.location.href = 'update_movie_action/'+movie_id+'/'+value+'/';
+}
+</script> 
+
+
+<h1>List of movies</h1>
+{% load static %}
+<h2>Public Items</h2>
+<table>
+<tr>
+<th>Owner</th>
+<th>Movie</th>
+<th>Stars</th>
+<th>Release</th>
+<th>GP</th>
+<th>Comments</th>
+{% for movie in movies_public %}
+	</tr>
+	<tr>
+	<td>{{movie.owner.username}}</td>
+	<td>{{movie.name}}</td>
+	<td>{{movie.stars}}</td>
+	<td>{{movie.release}}</td>
+	<td>{{movie.classpg}}</td>
+	<td>{{movie.comments}}</td>
+	</tr>
+{% endfor %}
+</table>
+<br>
+<br>
+<h2>Private or Owned Items</h2>
+
+<br>
+You can update the scope of your movie item by just changing it on the Public? column.
+<br>
+
+<table>
+<tr>
+<th>Owner</th>
+<th>Movie</th>
+<th>Stars</th>
+<th>Release</th>
+<th>GP</th>
+<th>Comments</th>
+<th>Public?</th>
+<th>Delete</th>
+{% for movie in movies_private %}
+	</tr>
+	<tr>
+	<td>{{movie.owner.username}}</td>
+	<td>{{movie.name}}</td>
+	<td>{{movie.stars}}</td>
+	<td>{{movie.release}}</td>
+	<td>{{movie.classpg}}</td>
+	<td>{{movie.comments}}</td>
+	<td><select name="mpublic" id="mpublic" onchange="javascript:update_movie({{movie.pk}})">
+	{% if movie.publicp %}
+	   <option value="True" selected="selected">True</option><option value="False">False</option></select>
+	{% else %}
+	   <option value="True">True</option><option value="False" selected="selected">False</option></select>
+	{% endif %}
+	</td>
+	<td><a href="delete_movie_action/{{movie.pk}}/" onclick="return confirm('Are you sure you want to delete this movie?');">Delete</a></td>
+	</tr>
+{% endfor %}
+</table>
+<br>
+<br>
+<a href="main_menu">Go to the main menu</a>
+</html>
+
