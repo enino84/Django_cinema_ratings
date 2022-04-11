@@ -39,21 +39,14 @@ The view define the following methods:
 9. `def update_movie_action(request, movie_id, publicp)`: this update the scope of a movie item from public to private or viceversa.
 10. `def restart_database(request)`: this function is for testing purposes, this restarts the database (delete all entries) and creates some dummy records.
 
-| views.py/methods.py                      	| `is_valid_password` 	| `is_valid_email` 	| `validate_user` 	| `validate_login` 	| `register_movie` 	| `get_public_movies` 	| `get_owned_movies` 	| `delete_movie` 	|   	|   	|
-|------------------------------------------	|---------------------	|------------------	|-----------------	|------------------	|------------------	|---------------------	|--------------------	|----------------	|---	|---	|
-| `index(request)`                         	|                     	|                  	|                 	|                  	|                  	|                     	|                    	|                	|   	|   	|
-| `register_owner(request)`                	|                     	|                  	|                 	|                  	|                  	|                     	|                    	|                	|   	|   	|
-| `main_menu(request)`                     	|                     	|                  	|                 	|                  	|                  	|                     	|                    	|                	|   	|   	|
-| `register_movie_form(request)`           	|                     	|                  	|                 	|                  	|                  	|                     	|                    	|                	|   	|   	|
-| `register_movie_action(request)`         	|                     	|                  	|                 	|                  	|                  	|                     	|                    	|                	|   	|   	|
-| `list_of_movies(request)`                	|                     	|                  	|                 	|                  	|                  	|                     	|                    	|                	|   	|   	|
-| `delete_movie_action(request, movie_id)` 	|                     	|                  	|                 	|                  	|                  	|                     	|                    	|                	|   	|   	|
-| `delete_movie_action(request, movie_id)` 	|                     	|                  	|                 	|                  	|                  	|                     	|                    	|                	|   	|   	|
-| `restart_database(request)`              	|                     	|                  	|                 	|                  	|                  	|                     	|                    	|                	|   	|   	|
-
-
-    
-    
-
-
-
+| views.py/methods.py     	| `is_valid_password` 	| `is_valid_email` 	| `register_user` 	| `validate_user` 	| `validate_login` 	| `register_movie` 	| `get_public_movies` 	| `get_owned_movies` 	| `delete_movie` 	| update_movie 	|
+|-------------------------	|---------------------	|------------------	|-----------------	|-----------------	|------------------	|------------------	|---------------------	|--------------------	|----------------	|--------------	|
+| `index`                 	|                     	|                  	|                 	|                 	|                  	|                  	|                     	|                    	|                	|              	|
+| `register_owner`        	| :blush:             	| :blush:          	| :blush:         	|                 	|                  	|                  	|                     	|                    	|                	|              	|
+| `main_menu`             	|                     	|                  	|                 	|                 	|                  	|                  	|                     	|                    	|                	|              	|
+| `register_movie_form`   	|                     	|                  	|                 	|                 	|                  	|                  	|                     	|                    	|                	|              	|
+| `register_movie_action` 	|                     	|                  	|                 	|                 	|                  	|                  	|                     	|                    	|                	|              	|
+| `list_of_movies`        	|                     	|                  	|                 	|                 	|                  	|                  	|                     	|                    	|                	|              	|
+| `delete_movie_action`   	|                     	|                  	|                 	|                 	|                  	|                  	|                     	|                    	|                	|              	|
+| `delete_movie_action`   	|                     	|                  	|                 	|                 	|                  	|                  	|                     	|                    	|                	|              	|
+| `restart_database`      	|                     	|                  	|                 	|                 	|                  	|                  	|                     	|                    	|                	|              	|
