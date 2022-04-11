@@ -1,4 +1,5 @@
-# simple_cinema_ratings
+# A Simple Movie Film Web-System via Django 
+
 This is a simple web-based system via Django for movie/film ratings.
 
 I suppose that `python3` and `Django` are available in your machine and properly configured (standard configuration).
